@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div id="gallery">
+            <img class="image" src="https://kvitochka.kiev.ua/image/cache/catalog/11_vesna/201-tulips2-500x500.jpg"
+                alt="" width="600px" height="500px" id="main-pic">
+            <div class="roulette">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="left">
+                    <<< </button>
+                        <button class="btn" id="right"> >>> </button></div>
+
+
+        </div>
+    </div>
+    <script>
+        function initNewApp(settings) { //0
+            const element = { //3
+                items: settings.items,
+                container: settings.container,
+                template: settings.template,
+                currentIdx: 0,
+                init() {
+                    this._render(); //5
+                    this._handleEvents();
+                },
+                _render() {
+                    let str = ''; //6
+                    this.items.forEach(el => { //7
+                        str += this.template(el); //7.1 ...
+                    });
+                    document.querySelector(this.container).innerHTML += str; //8
+                },
+                _handleEvents() {
+                    let main = document.querySelector('#main-pic');
+                    let rouletteEl = document.querySelectorAll('.img-preview');
+                    document.addEventListener('click', evt => {
+                        if (evt.target.classList.contains('img-preview')) {
+                            main.src = evt.target.src;
+                        }
+
+
+
+                        if (evt.target.id == 'left') {
+                            if (this.currentIdx == 0) {
+                                this.currentIdx = rouletteEl.length - 1;
+                            } else {
+                                this.currentIdx--;
+                            }
+                            main.src = rouletteEl[this.currentIdx].src;
+                        }
+                        if (evt.target.id == 'right') {
+                            if (this.currentIdx == (rouletteEl.length - 1)) {
+                                this.currentIdx = 0;
+
+                            } else {
+                                this.currentIdx++;
+                            }
+                            main.src = rouletteEl[this.currentIdx].src;
+                        }
+                    })
+                }
+
+            }
+
+            element.init(); //4
+
+            return element;
+        };
+
+        let carousele = { //1
+            items: [
+                'https://st.volga.news/image/w630/d714688c-0f16-41ba-8968-016be61fdf43.jpg', //el в forEach
+                'https://rose-market.ru/wa-data/public/shop/products/71/07/771/images/2714/2714.970.jpg',
+                'https://st2.depositphotos.com/4185411/7964/i/450/depositphotos_79646244-stock-photo-bouquet-from-cultivated-flowers-in.jpg',
+                'https://flostyle.ru/images/stories/virtuemart/product/cvetok%20(2).jpg',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR8t34BnpT0mKTeBVas4otWVjyn-LKdJTWjHQ&usqp=CAU'
+            ],
+            container: '.roulette',
+            template(el) {
+                return `<img src="${el}" width="100" height="80" class="img-preview">`
+            }
+        };
+
+        let newGallery = initNewApp(carousele); //2
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a5fef26e8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/layout/checkout.css">
+
+</head>
+
+
+<body>
+    <header class="header h-100 container">
+        <div class="header__left">
+            <a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+            <form class="search">
+                <div class="searchBrowse">Browse <i class="fas fa-caret-down"></i></div>
+                <input name="search" type="text" placeholder="Search for Item...">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header__right">
+            <img class="header__cart" src="../src/assets/img/cart.png" alt="headerCart">
+            <button class="button">My Account <i class="fas fa-caret-down"></i> </button>
+        </div>
+
+    </header>
+
+    <nav class="nav container h-100 flex-column d-flex flex-lg-row flex-md-row">
+        <a class="nav__link" href="#">Home</a>
+        <a class="nav__link" href="#">Hot Deals</a>
+        <a class="nav__link" href="#">Man</a>
+        <a class="nav__link" href="#">Women</a>
+        <a class="nav__link" href="#">Kids</a>
+        <a class="nav__link" href="#">Accoseriese</a>
+        <a class="nav__link" href="#">Featured</a>
+
+    </nav>
+    <div class="backArrivals container-fluid">
+        <div class="newArrivals container flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row">
+            <h1 class="newArrivals__h1">New Arrivals</h1>
+            <div class="rightBread">
+                <a href="#">Home</a>
+                <span>/</span>
+                <a href="#">Men</a>
+                <span>/</span>
+                <a href="#">New Arrivals</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <details class="details container">
+            <summary class="details__title">01. Shipping Adress</summary>
+            <div class="details container d-flex flex-column flex-sm-row flex-lg-row flex-md-row flex-xl-row">
+                <form action="#" class="form-left">
+                    <h3 class="details__h">Check as a guest or register</h3>
+                    <p class="details__prompt">Register with us for future convenience</p>
+                    <div class="details__radio">
+                        <label>
+                            <p class="details__input"><input name="details__input" type="radio" value="guest"> checkout
+                                as guest</p>
+                        </label>
+                        <label>
+                            <p class="details__input"><input name="details__input" checked type="radio"
+                                    value="reguister"> register</p>
+                        </label>
+                    </div>
+                    <a href="#">
+                        <h3 class="details__h">register and save time!</h3>
+                    </a>
+                    <p class="details__prompt">Register with us for future convenience</p>
+                    <ul class="menu">
+                        <li class="menu__list">Fast and easy checkout</li>
+                        <li class="menu__list">Easy access to your order history and status</li>
+                    </ul>
+                    <button class="form-button">Continue</button>
+                </form>
+                <form action="#" class="form-right">
+                    <h3 class="details__h">Already registed?</h3>
+                    <p class="details__prompt details__prompt_right">Please log in below</p>
+                    <div class="form-right form-right__group">
+                        <label for="form-right__email">Email address <span class="form-right__span">*</span></label>
+                        <input required type="email" class="form-right__email" id="exampleInputEmail1"
+                            aria-describedby="emailHelp"><br>
+                        <label for="form-right__password">Password <span class="form-right__span">*</span></label>
+                        <input required type="password" class="form-right__password" id="exampleInputPassword1">
+                    </div>
+                    <p class="details__prompt_special">* Required Fileds</p>
+                    <div class="form-right__click">
+                        <button class="form-button">Log in</button>
+                        <a href="#" class="form-right__link">Forgot Password ?</a>
+                    </div>
+                </form>
+            </div>
+        </details>
+        <hr>
+        <details class="details container">
+            <summary class="details__title">02. BILLING INFORMATION </summary>
+        </details>
+        <hr>
+        <details class="details container">
+            <summary class="details__title">03. SHIPPING INFORMATION </summary>
+        </details>
+        <hr>
+        <details class="details container">
+            <summary class="details__title">04. SHIPPING METHOD </summary>
+        </details>
+        <hr>
+        <details class="details container">
+            <summary class="details__title">05. PAYMENT METHOD </summary>
+        </details>
+        <hr>
+        <details class="details container">
+            <summary class="details__title">06. ORDER REVIEW </summary>
+        </details>
+        <hr>
+
+    </main>
+
+
+    <div class="subscribeBlock">
+        <div
+            class="container subscribe d-flex flex-column justify-content-sm-center justify-content-md-center flex-md-row flex-lg-row justify-content-lg-between flex-xl-row justify-content-xl-between">
+            <div class="subscribe__left">
+                <div>
+                    <img class="subscribePhoto" src="../src/assets/img/Layer 40@1X.jpeg" alt="img">
+                </div>
+                <section class="subscribeText">
+                    <div class="subscribeReview">
+                        “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
+                        condimentum mattis neque sed pretium”</div>
+                    <div class="subscribeData">
+                        <div class="subscribeName">Bin Burhan</div>
+                        <div class="subscribeCity">Dhaka, Bd</div>
+                    </div>
+                </section>
+            </div>
+            <div class="subscribe__right">
+                <div class="subscText">
+                    <h2 class="subs1">Subscribe</h2>
+                    <p class="subs2">For our NEWLETTER AND PROMOTION</p>
+                </div>
+
+                <form class="search2">
+                    <input class="subscribeInput" name="subscribeInput" placeholder="Enter Your Email" type="email">
+                    <button class="subscribeBtn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div
+        class="flex-column company h-100 flex-lg-row flex-md-row flex-xl-row justify-content-center justify-content-lg-between justify-content-xl-between container">
+        <div class="company1">
+            <a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+            <div class="objectivelyText">
+                <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded
+                    array of processes and cross-unit partnerships. </p>
+                <p>Efficiently plagiarize 24/365 action items and focused infomediaries.Distinctively seize superior
+                    initiatives for wireless technologies. Dynamically optimize.</p>
+            </div>
+        </div>
+        <div class="menuBlocks">
+            <div class="companyColumn">
+                <h2 class="heading mt-3">COMPANY</h2>
+                <div class="columnMenu">
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">How It Works</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="companyColumn">
+                <h2 class="heading mt-3">INFORMATION</h2>
+                <div class="columnMenu">
+                    <a href="#">Tearms & Condition</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">How to Buy</a>
+                    <a href="#">How to Sell</a>
+                    <a href="#">Promotion</a>
+                </div>
+            </div>
+            <div class="companyColumn">
+                <h2 class="heading mt-3">SHOP CATEGORY</h2>
+                <div class="columnMenu">
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Child</a>
+                    <a href="#">Apparel</a>
+                    <a href="#">Brows All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footerNoborder h-100 row">
+        <div class="footer h-100 row container">
+            <div class="data">&copy; 2017 Brand All Rights Reserved.</div>
+            <div class="socialIcons my-3">
+                <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="icon"><i class="fab fa-twitter"></i></div>
+                <div class="icon"><i class="fab fa-invision"></i></div>
+                <div class="icon"><i class="fab fa-pinterest-p"></i></div>
+                <div class="icon"><i class="fab fa-google-plus-g"></i></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

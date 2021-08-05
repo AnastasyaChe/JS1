@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleNumbers</title>
+</head>
+<body>
+    <script>
+        let lim = 100;
+        function getSimples(lim) {
+            let arr = [];
+            let num = 2;
+            while(num <= lim) {
+                if (checkNumber(num, arr)) {
+                    arr.push(num);
+                } num++;
+                
+            }
+            console.log(arr); 
+        }
+
+        function checkNumber(number, numArray) {
+            let check = true;
+            numArray.forEach(el => {
+                if(!(number % el)) {
+                    check = false;
+                   
+                }
+            });
+            return check;
+        }
+    </script>
+</body>
+</html>

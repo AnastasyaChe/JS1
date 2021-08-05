@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a5fef26e8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/layout/product.css">
+    <style>
+        .show {
+            display: flex;
+        }
+    </style>
+</head>
+<header
+    class="header row h-100 container d-flex justify-content-lg-center justify-content-md-between justify-content-sm-start">
+    <div class="header__left col-12 col-lg-8 my-3 col-md-12  col-sm-12">
+        <a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+        <form class="search">
+            <div class="searchBrowse">Browse <i class="fas fa-caret-down"></i></div>
+            <input name="search" type="text" placeholder="Search for Item...">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    <div class="row header__right d-flex col-12 col-lg-4 justify-content-lg-end my-3 col-md-12 col-sm-12">
+        <img id="cart" class="header__cart" src="../src/assets/img/cart.png" alt="headerCart">
+        <button class="button">My Account <i class="fas fa-caret-down"></i> </button>
+        <div id="hidden" class="button__drop drop">
+            <div class="account">
+
+                <div id="basket">
+
+                </div>
+                <div class="account-total">
+                    <h3 class="account-total__h">Total</h3>
+                    <h3 id="total" class="account-total__h"></h3>
+                </div>
+                <button class="account__btn" onclick="document.location='checkout.html'">Checkout</button>
+                <button class="account__btn" onclick="document.location='ShoppingCart.html'">Go to cart</button>
+            </div>
+        </div>
+    </div>
+
+</header>
+<nav class="nav container h-100 flex-column d-flex flex-lg-row flex-md-row">
+    <a class="nav__link" href="#">Home</a>
+    <a class="nav__link" href="#">Hot Deals</a>
+    <a class="nav__link" href="#">Man</a>
+    <a class="nav__link" href="#">Women</a>
+    <a class="nav__link" href="#">Kids</a>
+    <a class="nav__link" href="#">Accoseriese</a>
+    <a class="nav__link" href="#">Featured</a>
+
+</nav>
+<div class="backArrivals container-fluid">
+    <div class="newArrivals container flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row">
+        <h1 class="newArrivals__h1">New Arrivals</h1>
+        <div class="rightBread">
+            <a href="#">Home</a>
+            <span>/</span>
+            <a href="#">Men</a>
+            <span>/</span>
+            <a href="#">New Arrivals</a>
+        </div>
+    </div>
+</div>
+<main class="main container">
+    <div class="main__details col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+        <details class="details">
+            <summary class="details__summary">Category</summary>
+            <div class="details__items">
+                <a class="details__a" href="#">Accessories</a>
+                <a class="details__a" href="#">Bags</a>
+                <a class="details__a" href="#">Denim</a>
+                <a class="details__a" href="#">Hoodies & Sweatshirts</a>
+                <a class="details__a" href="#">Jackets & Coats</a>
+                <a class="details__a" href="#">Pants</a>
+                <a class="details__a" href="#">Polos</a>
+                <a class="details__a" href="#">Shirts</a>
+                <a class="details__a" href="#">Shoes</a>
+                <a class="details__a" href="#">Shorts</a>
+                <a class="details__a" href="#">Sweaters & Knits</a>
+                <a class="details__a" href="#">T-Shirts</a>
+                <a class="details__a" href="#">Tanks</a>
+            </div>
+        </details>
+        <details class="details">
+            <summary class="details__summary"> BRAND </summary>
+        </details>
+        <details class="details">
+            <summary class="details__summary">DESIGNER </summary>
+        </details>
+    </div>
+    <div class="main__right col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9">
+        <div class="sorting">
+            <div class="tranding">
+                <h2 class="sorting__h">Trending now</h2>
+                <div class="tranding__list">
+                    <a class="tranding__point" href="#">Bohemian</a>
+                    <a class="tranding__point tranding__point_spacial" href="#">Floral</a>
+                    <a class="tranding__point" href="#">Lace</a>
+                    <a class="tranding__point" href="#">Floral</a>
+                    <a class="tranding__point tranding__point_spacial" href="#">Lace</a>
+                    <a class="tranding__point" href="#">Bohemian</a>
+                </div>
+            </div>
+            <div class="size">
+                <h2 class="sorting__h">Size</h2>
+                <div class="size__box">
+                    <label class="size__input"><input type="checkbox" /> XXS</label>
+                    <label class="size__input"><input type="checkbox" /> XS</label>
+                    <label class="size__input"><input type="checkbox" /> S</label>
+                    <label class="size__input"><input type="checkbox" /> M</label>
+                    <label class="size__input"><input type="checkbox" /> L</label>
+                    <label class="size__input"><input type="checkbox" /> XL</label>
+                    <label class="size__input"><input type="checkbox" /> XXL</label>
+                </div>
+            </div>
+            <form class="form__range" action="#" method="post">
+                <h2 class="sorting__h">Price</h2>
+                <label for="range"></label>
+                <input class="form__range_input" name="range" id="range" type="range" value="30" step="0.1">
+                <div class="price">
+                    <p class="price__sort">52$</p>
+                    <p class="price__sort">400$</p>
+                </div>
+            </form>
+        </div>
+        <div class="selection">
+            <div class="sort">
+                <div class="sortby">Sort By</div>
+                <select class="sort__select" name="Name" id="">
+                    <option value="name">Name</option>
+                    <option value="class">Class</option>
+                </select>
+            </div>
+            <div class="sort sort_right">
+                <div class="sortby">Show</div>
+                <select class="sort__select" name="09" id="">
+                    <option value="name">09</option>
+                    <option value="class">08</option>
+                </select>
+            </div>
+        </div>
+
+        <section id="catalog" class="galery">
+            <article class="galery__product">
+                <a href="singlePage.html"><img class="product__img" src="../src/assets/img/men1.png" alt
+                        class="prodimage"></a>
+                <a href="ShoppingCart.html" class="product__add">
+                    <i class="fas fa-shopping-cart"></i> <span class="text_to_cart"> Add to Cart </span>
+                </a>
+                <div class="galery__info">
+                    <h2 class="galery__mango">Mango People T-shirt</h2>
+                    <div class="galery__price">$52.00</div>
+                </div>
+            </article>
+        </section>
+        <div class="moreinfo col-12">
+            <div class="moreinfo__pagin">
+                <a class="moreinfo__a" href="#"><i class="fas fa-angle-left"></i></a>
+                <a class="moreinfo__a" href="#">1</a>
+                <a class="moreinfo__a" href="#">2</a>
+                <a class="moreinfo__a" href="#">3</a>
+                <a class="moreinfo__a" href="#">4</a>
+                <a class="moreinfo__a" href="#">5</a>
+                <a class="moreinfo__a" href="#">6 <span>.....</span> 20</a>
+                <a class="moreinfo__a" href="#"><i class="fas fa-angle-right"></i></a>
+            </div>
+            <button class="moreinfo__button">View All</button>
+        </div>
+
+    </div>
+</main>
+<div class="women">
+    <div class="women__right container">
+        <div class="freeDelivery col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 justify-content-center">
+            <img class="freeDelivery__img" src="../src/assets/img/Forma_1.svg" alt="img">
+            <h2 class="freeDelivery__h">Free Delivery</h2>
+            <p class="freeDelivery__p">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                extensive models.</p>
+        </div>
+        <div class="freeDelivery col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 justify-content-center">
+            <img class="freeDelivery__img" src="../src/assets/img/Forma_2.svg" alt="img">
+            <h2 class="freeDelivery__h">Free Delivery</h2>
+            <p class="freeDelivery__p">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                extensive models.</p>
+        </div>
+        <div class="freeDelivery col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 justify-content-center">
+            <img class="freeDelivery__img" src="../src/assets/img/Forma_3.svg" alt="img">
+            <h2 class="freeDelivery__h">Free Delivery</h2>
+            <p class="freeDelivery__p">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                extensive models.</p>
+        </div>
+    </div>
+</div>
+
+<div class="subscribeBlock">
+    <div
+        class="container subscribe d-flex flex-column justify-content-sm-center justify-content-md-center flex-lg-row flex-xl-row">
+        <div class="subscribe__left">
+            <div>
+                <img class="subscribePhoto" src="../src/assets/img/Layer 40@1X.jpeg" alt="alt">
+            </div>
+            <section class="subscribeText">
+                <p class="subscribeReview">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                    condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                <div class="subscribeData">
+                    <div class="subscribeName">Bin Burhan</div>
+                    <div class="subscribeCity">Dhaka, Bd</div>
+                </div>
+            </section>
+        </div>
+        <div class="subscribe__right">
+            <div class="subscText">
+                <h2 class="subs1">Subscribe</h2>
+                <p class="subs2">For our NEWLETTER AND PROMOTION</p>
+            </div>
+
+            <form class="search2">
+                <input class="subscribeInput" name="subscribeInput" placeholder="Enter Your Email" type="email">
+                <button class="subscribeBtn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="company container">
+    <div class="company1">
+        <a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+        <div class="objectivelyText">
+            <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
+                multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
+                processes and cross-unit partnerships. </p> <br>
+            <p>Efficiently plagiarize 24/365 action items and focused infomediaries.Distinctively seize superior
+                initiatives for wireless technologies. Dynamically optimize.</p>
+        </div>
+    </div>
+    <div class="menuBlocks">
+        <div class="companyColumn">
+            <h2 class="heading mt-3">COMPANY</h2>
+            <div class="columnMenu">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">How It Works</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="companyColumn">
+            <h2 class="heading mt-3">INFORMATION</h2>
+            <div class="columnMenu">
+                <a href="#">Tearms & Condition</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">How to Buy</a>
+                <a href="#">How to Sell</a>
+                <a href="#">Promotion</a>
+            </div>
+        </div>
+        <div class="companyColumn">
+            <h2 class="heading mt-3">SHOP CATEGORY</h2>
+            <div class="columnMenu">
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Child</a>
+                <a href="#">Apparel</a>
+                <a href="#">Brows All</a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footerNoborder container ">
+    <div class="footer container">
+        <div class="data">&copy; 2017 Brand All Rights Reserved.</div>
+        <div class="socialIcons">
+            <div class="icon"><i class="fab fa-facebook-f"></i></div>
+            <div class="icon"><i class="fab fa-twitter"></i></div>
+            <div class="icon"><i class="fab fa-invision"></i></div>
+            <div class="icon"><i class="fab fa-pinterest-p"></i></div>
+            <div class="icon"><i class="fab fa-google-plus-g"></i></div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+<script src="../src/components/basket.js"></script>
+<script src="../src/components/product.js"></script>
+</body>
+
+</html>

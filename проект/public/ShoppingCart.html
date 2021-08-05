@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a5fef26e8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/layout/styleShop.css">
+
+</head>
+
+
+<body>
+    <header class="header container">
+        <div class="header__left">
+            <a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+            <form class="search">
+                <div class="searchBrowse">Browse <i class="fas fa-caret-down"></i></div>
+                <input name="search" type="text" placeholder="Search for Item...">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header__right">
+            <img class="header__cart" src="../src/assets/img/cart.png" alt="headerCart">
+            <div class="button">My Account <i class="fas fa-caret-down"></i>
+            </div>
+
+    </header>
+
+    <nav class="nav container h-100 flex-column d-flex flex-lg-row flex-md-row">
+        <a class="nav__link" href="#">Home</a>
+        <a class="nav__link" href="#">Hot Deals</a>
+        <a class="nav__link" href="#">Man</a>
+        <a class="nav__link" href="#">Women</a>
+        <a class="nav__link" href="#">Kids</a>
+        <a class="nav__link" href="#">Accoseriese</a>
+        <a class="nav__link" href="#">Featured</a>
+
+    </nav>
+    <div class="backArrivals">
+        <div class="newArrivals container flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row">
+            <h1 class="newArrivals__h1">New Arrivals</h1>
+            <div class="rightBread">
+                <a href="#">Home</a>
+                <span>/</span>
+                <a href="#">Men</a>
+                <span>/</span>
+                <a href="#">New Arrivals</a>
+            </div>
+        </div>
+    </div>
+    <section class="shoppingMenu container">
+        <div class="shoppingCartRow shoppingCartHead ">
+            <h2 class="shoppingCartRow shoppingCatrFirst">Product Details </h2>
+            <h2 class="shoppingCartRow">unite Price</h2>
+            <h2 class="shoppingCartRow">Quantity</h2>
+            <h2 class="shoppingCartRow">shipping</h2>
+            <h2 class="shoppingCartRow">Subtotal</h2>
+            <h2 class="shoppingCartRow">Action</h2>
+        </div>
+        <div class="line container"></div>
+        <article class="shoppingCartRow ">
+            <div class="product">
+                <img src="../src/assets/img/Layer_43.jpg" alt="product">
+
+                <div class="productDetails">
+                    <h2>Mango People T-shirt</h2>
+                    <span class="color">Color:</span> Red <br><span class="size">Size:</span> Xll
+                </div>
+            </div>
+            <div class="productPrice tabElement">$150</div>
+            <div class="productQuantity tabElement">
+                <input type="number" plaseholder="2">
+            </div>
+            <div class="produtcShipping tabElement">FREE</div>
+            <div class="productSubtotal tabElement">$300</div>
+            <div class="productAction tabElement"><i class="fas fa-times-circle"></i></div>
+        </article>
+        <div class="line container"></div>
+        <article class="shoppingCartRow ">
+            <div class="product">
+                <img src="../src/assets/img/Layer_44.jpg" alt="product">
+
+                <div class="productDetails">
+                    <h2>Mango People T-shirt</h2>
+                    <span class="color">Color:</span> Red <br><span class="size">Size:</span> Xll
+                </div>
+            </div>
+            <div class="productPrice tabElement">$150</div>
+            <div class="productQuantity tabElement">
+                <input type="number" plaseholder="2">
+            </div>
+            <div class="produtcShipping tabElement">FREE</div>
+            <div class="productSubtotal tabElement">$300</div>
+            <div class="productAction tabElement"><i class="fas fa-times-circle"></i></div>
+        </article>
+        <div class="line container"></div>
+        <article class="shoppingCartRow ">
+            <div class="product">
+                <img src="../src/assets/img/Layer_45.jpg" alt="product">
+
+                <div class="productDetails">
+                    <h2>Mango People T-shirt</h2>
+                    <span class="color">Color:</span> Red <br><span class="size">Size:</span> Xll
+                </div>
+            </div>
+            <div class="productPrice tabElement">$150</div>
+            <div class="productQuantity tabElement">
+                <input type="number" plaseholder="2">
+            </div>
+            <div class="produtcShipping tabElement">FREE</div>
+            <div class="productSubtotal tabElement">$300</div>
+            <div class="productAction tabElement"><i class="fas fa-times-circle"></i></div>
+        </article>
+        <div class="line container"></div>
+    </section>
+    <div class="btns container">
+
+        <button class="btnLeft">cLEAR SHOPPING CART</button>
+
+        <button class="btnRight">cONTINUE sHOPPING</button>
+
+    </div>
+    <form class="inputs container">
+        <div class="blockAdress">
+            <h2 class="blockAdress__h">Shipping Adress</h2>
+            <select required size="1">
+                <option value="Бангладеш">Bangladesh</option>
+                <option value="Сингапур">Singapur</option>
+            </select>
+
+
+            <input required type="text" class="adressState" placeholder="State">
+            <input required type="text" class="adressPost" placeholder="Postcode / Zip">
+            <button class="getQuote">get a quote</button>
+        </div>
+        <div class="blockAdress">
+            <h2 class="blockAdress__h">coupon discount</h2>
+            <label for="coupon">Enter your coupon code if you have one</label> <br>
+            <input type="text" placeholder="State">
+            <br>
+            <button class="applyCoupon">Apply coupon</button>
+        </div>
+        <div class="blockAdress rightBlockAdress">
+            <h2 class="subTotal"> Sub total &nbsp; &nbsp; $900</h2>
+            <h2 class="grandT">GRAND TOTAL &nbsp; <span class="grandTotal"> $900</span></h2>
+            <div class="lineInBlock"></div>
+            <button class="proceedCheckout">proceed to checkout</button>
+        </div>
+
+    </form>
+
+    <div class="subscribeBlock">
+        <div class="container subscribe">
+            <div class="subscribe__left">
+                <div>
+                    <img class="subscribePhoto" src="../src/assets/img/Layer 40@1X.jpeg" alt="img">
+                </div>
+                <section class="subscribeText">
+                    <div class="subscribeReview">
+                        “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
+                        condimentum mattis neque sed pretium”</div>
+                    <div class="subscribeData">
+                        <div class="subscribeName">Bin Burhan</div>
+                        <div class="subscribeCity">Dhaka, Bd</div>
+                    </div>
+                </section>
+            </div>
+            <div class="subscribe_right">
+                <div class="subscText">
+                    <h2 class="subs1">Subscribe</h2>
+                    <p class="subs2">For our NEWLETTER AND PROMOTION</p>
+                </div>
+
+                <form class="search2">
+                    <input class="subscribeInput" name="subscribeInput" placeholder="Enter Your Email" type="email">
+                    <button class="subscribeBtn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="company container">
+        <div class="company1">
+            <a href="index.html" class="logo">Bran<span class="logo__span">d</span></a>
+            <div class="objectivelyText">
+                <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded
+                    array of processes and cross-unit partnerships. </p>
+                <p>Efficiently plagiarize 24/365 action items and focused infomediaries.Distinctively seize superior
+                    initiatives for wireless technologies. Dynamically optimize.</p>
+            </div>
+        </div>
+        <div class="menuBlocks">
+            <div class="companyColumn">
+                <h2 class="heading mt-3">COMPANY</h2>
+                <div class="columnMenu">
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">How It Works</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="companyColumn">
+                <h2 class="heading mt-3">INFORMATION</h2>
+                <div class="columnMenu">
+                    <a href="#">Tearms & Condition</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">How to Buy</a>
+                    <a href="#">How to Sell</a>
+                    <a href="#">Promotion</a>
+                </div>
+            </div>
+            <div class="companyColumn">
+                <h2 class="heading mt-3">SHOP CATEGORY</h2>
+                <div class="columnMenu">
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Child</a>
+                    <a href="#">Apparel</a>
+                    <a href="#">Brows All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footerNoborder">
+        <div class="footer container">
+            <div class="data">&copy; 2017 Brand All Rights Reserved.</div>
+            <div class="socialIcons">
+                <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="icon"><i class="fab fa-twitter"></i></div>
+                <div class="icon"><i class="fab fa-invision"></i></div>
+                <div class="icon"><i class="fab fa-pinterest-p"></i></div>
+                <div class="icon"><i class="fab fa-google-plus-g"></i></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

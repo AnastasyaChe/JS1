@@ -1,0 +1,34 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+.roulette {
+    display: flex;
+    justify-content: space-around;
+}
+.image {
+    border: 2px solid darkolivegreen;
+}
+.img-preview {
+    border: 2px solid darkolivegreen;
+}
+.img-preview:hover {
+    border: 2px solid azure;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.btn {
+    padding: 10px 30px;
+}
+#left {
+    margin-right: 16px;
+}

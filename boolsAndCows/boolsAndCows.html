@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Условие: система загадывает 4хзначное число, например, 1234
+        Предлагается ввести пользователю 4хзначное число. он вводит 3249
+        в ответ на это система присылает "бык, корова", что означает, 
+        что в случае с 2 попал полностью, с 4 угадал только число, 
+        но не место расположения.
+    </p>
+
+    <script>
+        function game() {
+            let goal = getNumber();
+            let rounds = 10;
+            let playing = true;
+            while(playing) {
+                if(rounds > 0) {
+                    playing = findOut(goal);
+                    console.log(playing ? `Осталось ${--rounds}` : `You wind ${goal}`);
+                } else {
+                    playing = false;
+                    console.log('Увы! Загаданное число ' + goal);
+                }
+            }
+        }
+        
+        function getNumber() {
+            let arr = [];
+            while(arr.length != 4) {
+                let newNum = randomize();
+                if(arr.indexOf(newNum) == -1) {
+                    arr.push(newNum);
+                }
+            }
+            return arr;
+        }
+        function randomize() {
+            return Math.floor(Math.random() * 10);
+        }
+        function findOut(goal) {
+            let cows = 0;
+            let bulls = 0;
+            let user = [...prompt('Введите 4 разных цифры')];
+            user.forEach((num, index) => {
+                if(+num === goal[index]) {
+                    bulls++;
+                }else if(goal.indexOf(+num) > -1){
+                    cows++;
+                }
+            });
+            console.log('Вы ввели ' + user);
+            console.log(bulls);
+            console.log(cows);
+            return bulls < 4 ? true : false; 
+        }
+        game();
+    </script>
+</body>
+</html>

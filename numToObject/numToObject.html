@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1. Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999,
+        мы должны получить на выходе объект, в котором в соответствующих свойствах описаны единицы,
+        десятки и сотни. Например, для числа 245 мы должны получить следующий объект:
+        {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. Если число превышает 999,
+        необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.</p>
+    <script>
+        let num = '123';
+        function numToObject(num) {
+            let arr = [...num];// ['1', '2', '3']
+            while (arr.length != 3) {
+                arr.unshift(0);
+            }
+            return {
+                hundreds: +arr[0],
+                decades: +arr[1],
+                units: +arr[2]
+            }
+        }
+        console.log(numToObject(num));
+    </script>
+</body>
+
+</html>
